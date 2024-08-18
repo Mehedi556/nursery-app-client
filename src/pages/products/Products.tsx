@@ -40,13 +40,11 @@ const Products = () => {
 
   const { data, isLoading } = useGetAllProductsQuery(query);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleClickPreviousPage = (event: any) => {
+  const handleClickPreviousPage = () => {
     page !== 1 ? setPage((prev) => prev - 1) : null;
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleClickNextPage = (event: any) => {
+  const handleClickNextPage = () => {
     page !== data?.data?.meta?.totalPage ? setPage((prev) => prev + 1) : null;
   };
 
